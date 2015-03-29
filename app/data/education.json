@@ -1,0 +1,21 @@
+[
+  {
+    "institution": "University of Southern California",
+    "degree": "B.S., Computer Engineering and Computer Science",
+    "gpa": "3.60",
+    "grad-date": "2005-05",
+    "honors": [
+      "cum laude",
+      "Renniassance Scholar"
+    ]
+  },
+  {
+    "institution": "University of Southern California Gould School of Law",
+    "degree": "J.D.",
+    "gpa": "3.15",
+    "grad-date": "2008-05",
+    "honors": [
+      "Grades: Entertainment Law, Business Organizations, Corporate Finance, International Finance, Accounting, Counseling Startups, Gifts, Wills & Trusts"
+    ]
+  }
+]

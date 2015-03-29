@@ -1,0 +1,13 @@
+{
+  "first-name": "Arjan",
+  "last-name": "Singh",
+  "address": {
+    "street": "1100 Wilshire Blvd #2810",
+    "city": "Los Angeles",
+    "zip": "90017"
+  },
+  "phone": "213-309-0385",
+  "email": "arjan.singh@gmail.com",
+  "github": "https://github.com/arjansingh",
+  "linked-in": "https://www.linkedin.com/in/singharjan"
+}
