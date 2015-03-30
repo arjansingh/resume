@@ -1,3 +1,23 @@
 <section class="contact-info">
-  <h2>I'm Arjan</h2>
+  <div>{{contact.first-name}} {{contact.last-name}}</div>
+  {{#with contact.address as address}}
+    <div class="address">
+      <span class="street">{{address.street}}</span>
+      <span class="city">{{address.city}}</span>
+      <span class="state">{{address.state}}</span>
+      <span class="zip">{{address.zip}}</span>
+    </div>
+  {{/with}}
+  <div class="phone">
+    <a href="tel:{{unbound contact.phone}}">{{contact.phone}}</a>
+  </div>
+  <div class="email">
+    <a href="mailto:{{unbound contact.email}}">{{contact.email}}</a>
+  </div>
+  <div class="github">
+    <a href="https://github.com/{{unbound contact.github}}">Github</a>
+  </div>
+  <div class="linked-in">
+    <a href="https://www.linkedin.com/in/{{unbound contact.linked-in}}">LinkedIn</a>
+  </div>
 </section>
