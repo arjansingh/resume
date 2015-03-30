@@ -1,7 +1,7 @@
 [
   {
     "company": "Yahoo Inc.",
-    "job-title": "Front-End Engineer",
+    "title": "Front-End Engineer",
     "start-date": "2013-01",
     "end-date": "0000-00",
     "location": {
@@ -24,7 +24,7 @@
   },
   {
     "company": "Hoteki",
-    "job-title": "Front-End Engineer",
+    "title": "Front-End Engineer",
     "start-date": "2011-08",
     "end-date": "2012-12",
     "location": {
@@ -46,7 +46,7 @@
   },
   {
     "company": "FINRA (Financial Industry Regulatory Authority)",
-    "job-title": "Staff Attorney",
+    "title": "Staff Attorney",
     "start-date": "2010-06",
     "end-date": "2011-08",
     "location": {
@@ -62,7 +62,7 @@
   },
   {
     "company": "Los Angeles County District Attorney's Office",
-    "job-title": "Law Clerk",
+    "title": "Law Clerk",
     "start-date": "2009-01",
     "end-date": "2010-05",
     "location": {
@@ -78,7 +78,7 @@
   },
   {
     "company": "The Honorable Judge Ellen Carroll",
-    "job-title": "Judicial Extern",
+    "title": "Judicial Extern",
     "start-date": "2007-06",
     "end-date": "2007-11",
     "location": {
@@ -90,7 +90,7 @@
   },
   {
     "company": "Hatch & Parent",
-    "job-title": "Law Clerk",
+    "title": "Law Clerk",
     "start-date": "2006-06",
     "end-date": "2006-08",
     "location": {
@@ -102,7 +102,7 @@
   },
   {
     "company": "The Office of Congressman Dana Rohrabacher",
-    "job-title": "Legislative Intern",
+    "title": "Legislative Intern",
     "start-date": "2005-05",
     "end-date": "2005-08",
     "location": {
@@ -114,7 +114,7 @@
   },
   {
     "company": "Northrop Grumman Corp.",
-    "job-title": "Systems Analyst Intern",
+    "title": "Systems Analyst Intern",
     "start-date": "2004-09",
     "end-date": "2005-05",
     "location": {

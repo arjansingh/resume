@@ -1,7 +1,6 @@
 {
-  "engineering": [
+  "software": [
     "AJAX",
-    "C/C++",
     "chai.js",
     "Chrome Developer Tools", "CoffeeScript",
     "CSS3",
@@ -9,7 +8,6 @@
     "Eclipse",
     "Git",
     "Github",
-    "JavaScript",
     "Jenkins",
     "jQuery",
     "JSON",
@@ -21,7 +19,6 @@
     "Node.js",
     "Protractor",
     "Photoshop",
-    "PHP",
     "REST",
     "SASS/Compass",
     "Selenium Webdriver",
@@ -31,13 +28,17 @@
     "q.js"
   ],
   "languages": [
+    "C/C++",
+    "JavaScript/ES6",
+    "PHP",
     "Spanish"
   ],
   "interests": [
     "Bourbon",
+    "Blues Guitar",
     "College Football",
-    "Stock Trading",
     "Financial History",
-    "Blues Guitar"
+    "Photography",
+    "Stock Trading"
   ]
 }
