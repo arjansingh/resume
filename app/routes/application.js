@@ -9,7 +9,7 @@ export default Ember.Route.extend({
     return {
       'contact': contactInfo,
       'education': education,
-      'experience': experience,
+      'experience': experience.splice(0,3),
       'skills': skills
     };
   }
