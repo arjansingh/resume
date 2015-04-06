@@ -3,8 +3,8 @@
   <ul class="jobs">
     {{#each job in experience}}
     <li class="job">
-      <h3>{{job.title}}</h3>
-      <h4>{{job.company}}</h4>
+      <h3 class="title">{{job.title}}</h3>
+      <h4 class="employer">{{job.company}}</h4>
       <p class="dates">
         <span class="start">{{job.start-date}}</span> to <span class="end">{{job.end-date}}</span>
       </p>
@@ -13,23 +13,23 @@
         <span class="city">{{location.city}}</span>, <span class="state">{{location.state}}</span>
       </p>
       {{/with}}
-      </li>
       {{#if job.accomplishments}}
       <h5>Accomplishments:</h5>
       <ul class="accomplishments">
       {{#each accomplishment in job.accomplishments}}
-        <li>{{accomplishment}}</li>
+        <li class="item">{{accomplishment}}</li>
       {{/each}}
       </ul>
       {{/if}}
       {{#if job.duties}}
-      <h5>Duties</h5>
+      <h5>Duties:</h5>
       <ul class="duties">
       {{#each duty in job.duties}}
-        <li>{{duty}}</li>
+        <li class="item">{{duty}}</li>
       {{/each}}
       </ul>
       {{/if}}
+    </li>
     {{/each}}
   </ul>
 </section>

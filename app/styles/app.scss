@@ -1,6 +1,16 @@
+// @TODO Configure multi-file support
+
+// because I don't feel like downloading Compass
+@mixin transition ($property, $duration, $fn: ease-in-out) {
+	transition: $property $duration $fn;
+	-webkit-transition: $property $duration $fn;
+	-moz-transition: $property $duration $fn;
+	-ms-transition: $property $duration $fn;
+	-o-transition: $property $duration $fn;
+}
 
 /*** Reset ***/
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+body,p,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
 	padding: 0;
 	margin: 0;
 }
@@ -29,15 +39,299 @@ caption,th {
 
 q:before,q:after { content:''; }
 abbr,acronym { border: 0; }
+
+code,pre {
+	font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 1.25em;
+}
 /*** Reset ***/
 
+/*** Typography ***/
+
+$bdMargin: 4%;
+$gutter: 0.5%;
+$maxBdWidth: 1280px;
+$fontColor: #222;
+
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 14px;
+	background-color: rgba(234, 234, 234, 0.5);
+	color: $fontColor;
+
+	font: 100%/1.35 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 200;
+
   -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	text-rendering: optimizeLegibility;
+
+	margin: $bdMargin;
+	max-width: $maxBdWidth;
 }
 
 h1, h2, h3, h4, h5 {
-  font-weight: 300;
+  font-weight: 400;
 }
+
+h1 {
+  font-size: 2.074em;
+}
+
+h2 {
+	font-size: 1.728em;
+	margin-bottom: 0.25em;
+}
+
+h3 {
+	font-size: 1.44em;
+	line-height: 1.25em;
+	margin-bottom: 0.25em;
+}
+
+h4 {
+	font-size: 1.2em;
+}
+
+h5 {
+	font-size: 1em;
+}
+
+p, li {
+	font-size: 1em;
+}
+
+section {
+	margin-bottom: 1em;
+}
+
+@media print {
+	* {
+		background: transparent !important;
+		color: #000 !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+}
+/*** Typography ***/
+
+/*** Grid ***/
+
+// Grid based on the Golden Ratio
+
+.grid-phi {
+	$fullWidth: 100% - 2*$bdMargin;
+	$phi: 1.6180339887498948482;
+	$phiInverse: 1/$phi;
+
+	.c-wide {
+		width: percentage($phiInverse) - $bdMargin;
+
+		& + .c-short {
+			padding-left: 2 * $gutter;
+		}
+	}
+
+	.c-short {
+		width: percentage($phiInverse * $phiInverse) - $bdMargin;
+
+		& + .c-wide {
+			padding-left: 8*$gutter;
+		}
+	}
+
+	.c-full {
+		width: $fullWidth;
+	}
+
+	.c-wide, .c-short {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	@media screen and (max-width: 750px) {
+		.c-wide, .c-short {
+			width: 100% - $bdMargin;
+		}
+
+		.c-wide + .c-short,
+		.c-short + .c-wide {
+			padding-left: 0;
+		}
+	}
+}
+
+/*** Contact Info ***/
+.contact-info {
+	.name {
+		padding-right: 2 * $gutter;
+	}
+
+	.methods {
+
+		li {
+			display: inline-block;
+			margin: 0 $gutter;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		.address {
+			display: block;
+		}
+
+		@media screen and (min-width: 1130px) {
+			text-align: right;
+		}
+
+		@media screen and (max-width: 625px) {
+			li {
+				display: block;
+			}
+		}
+
+		@media screen and (max-width: 320px) {
+			.street {
+				display: block;
+			}
+		}
+	}
+
+	.state {
+		&::after {
+			content: ",";
+		}
+	}
+
+	.phone {
+		&::before {
+			content: "tel:";
+		}
+	}
+
+	.email {
+		&::before {
+			content: "mail:";
+		}
+	}
+
+	.github {
+		background-image: url("/assets/images/github-mark.svg");
+	}
+
+	.linked-in {
+		background-image: url("/assets/images/linkedin-mark.svg");
+	}
+
+	.linked-in, .github {
+		padding-left: 1.25em;
+		background-repeat: no-repeat;
+		background-position: left;
+		background-size: 1.25em;
+
+		&::before {
+			content: ":";
+		}
+	}
+}
+/*** Contact Info ***/
+
+/*** Experience ***/
+.experience {
+	.dates, .location {
+		display: inline-block;
+	}
+
+	.dates {
+		&::after {
+			content: "\2014"
+		}
+	}
+
+	.job {
+		margin-bottom: 0.5em;
+	}
+
+	.location {
+		font-style: italic;
+	}
+
+	.accomplishments, .duties {
+		.item {
+			list-style-type: disc;
+			line-height: 1.2em;
+			margin-left: 1.5em;
+			margin-bottom: 0.25em;
+		}
+	}
+}
+/*** Experience ***/
+
+/*** Skills ***/
+.skills {
+	.software, .languages, .interests {
+		.item {
+			$itemColor: hsl(255, 75%, 75%);
+			$transitionTime: 150ms;
+
+			display: inline-block;
+			background-color: $itemColor;
+
+			border-radius: 4px 4px 4px 4px;
+			-moz-border-radius: 4px 4px 4px 4px;
+			-webkit-border-radius: 4px 4px 4px 4px;
+			border: 0px solid #000000;
+
+			margin: $gutter 0;
+			padding: 2*$gutter 4*$gutter;
+
+			@include transition(background-color, $transitionTime, ease-in-out);
+
+			pre {
+				@include transition(font-weight, $transitionTime, ease-in-out);
+			}
+
+			vertical-align: bottom;
+
+			&:hover {
+				background-color: darken($itemColor, 15);
+				pre {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
+/*** Skills ***/
+
+/*** Education ***/
+.education {
+	.institution {
+		margin-bottom: 1em;
+	}
+
+	.degree, .gpa, .grad-date {
+		h5 {
+			display: inline-block;
+			padding-right: 0.25em;
+		}
+	}
+
+	.honors {
+		font-style: italic;
+
+		.item {
+			margin-left: 1em;
+		}
+	}
+}
+/*** Education ***/

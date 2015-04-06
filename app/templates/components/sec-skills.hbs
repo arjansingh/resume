@@ -4,25 +4,31 @@
     <h3>Software</h3>
     <ul class="software">
     {{#each item in skills.software}}
-      <li>{{item}}</li>
+      <li class="item">
+        <pre>{{item}}</pre>
+      </li>
     {{/each}}
     </ul>
   {{/if}}
 
   {{#if skills.languages}}
     <h3>Languages</h3>
-    <ul class="software">
+    <ul class="languages">
     {{#each item in skills.languages}}
-      <li>{{item}}</li>
+      <li class="item">
+        <pre>{{item}}</pre>
+      </li>
     {{/each}}
     </ul>
   {{/if}}
 
   {{#if skills.interests}}
     <h3>Personal Interests</h3>
-    <ul class="software">
+    <ul class="interests">
     {{#each item in skills.interests}}
-      <li>{{item}}</li>
+      <li class="item">
+        <pre>{{item}}</pre>
+      </li>
     {{/each}}
     </ul>
   {{/if}}
