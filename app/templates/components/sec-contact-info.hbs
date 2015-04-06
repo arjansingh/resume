@@ -1,23 +1,25 @@
-<section class="contact-info">
-  <div>{{contact.first-name}} {{contact.last-name}}</div>
-  {{#with contact.address as address}}
-    <div class="address">
+<section class="contact-info grid-25">
+  <h1 class="name c-1">{{contact.first-name}}&nbsp;{{contact.last-name}}</h1>
+  <ul class="methods c-3">
+    {{#with contact.address as address}}
+    <li class="address">
       <span class="street">{{address.street}}</span>
       <span class="city">{{address.city}}</span>
       <span class="state">{{address.state}}</span>
       <span class="zip">{{address.zip}}</span>
-    </div>
-  {{/with}}
-  <div class="phone">
-    <a href="tel:{{unbound contact.phone}}">{{contact.phone}}</a>
-  </div>
-  <div class="email">
-    <a href="mailto:{{unbound contact.email}}">{{contact.email}}</a>
-  </div>
-  <div class="github">
-    <a href="https://github.com/{{unbound contact.github}}">Github</a>
-  </div>
-  <div class="linked-in">
-    <a href="https://www.linkedin.com/in/{{unbound contact.linked-in}}">LinkedIn</a>
-  </div>
+    </li>
+    {{/with}}
+    <li class="phone">
+      <a href="tel:{{unbound contact.phone}}">{{contact.phone}}</a>
+    </li>
+    <li class="email">
+      <a href="mailto:{{unbound contact.email}}">{{contact.email}}</a>
+    </li>
+    <li class="github">
+      <a href="https://github.com/{{unbound contact.github}}">{{unbound contact.github}}</a>
+    </li>
+    <li class="linked-in">
+      <a href="https://www.linkedin.com/in/{{unbound contact.linked-in}}">{{unbound contact.linked-in}}</a>
+    </li>
+  </ul>
 </section>

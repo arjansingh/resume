@@ -1,12 +1,12 @@
 <section class="education">
   <h2>Education</h2>
-  <ul>
+  <ul class="institution">
   {{#each institution in education}}
     <li>
       <h3>{{institution.name}}</h3>
-      <div class="degree"><span>Degree:</span>{{institution.degree}}</div>
-      <div class="gpa"><span>GPA:</span>{{institution.gpa}}</div>
-      <div class="grad-date"><span>Graduation Date:</span>{{institution.grad-date}}</div>
+      <p class="degree"><span>Degree:</span>{{institution.degree}}</p>
+      <p class="gpa"><span>GPA:</span>{{institution.gpa}}</p>
+      <p class="grad-date"><span>Graduation Date:</span>{{institution.grad-date}}</p>
       {{#if institution.honors}}
       <h4>Honors</h4>
       <ul class="honors">
