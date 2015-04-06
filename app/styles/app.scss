@@ -9,6 +9,7 @@
 	-o-transition: $property $duration $fn;
 }
 
+
 /*** Reset ***/
 body,p,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
 	padding: 0;
@@ -52,16 +53,18 @@ code,pre {
 
 /*** Typography ***/
 
+$bgColor: rgba(234, 234, 234, 0.5);
 $bdMargin: 4%;
 $gutter: 0.5%;
 $maxBdWidth: 1280px;
 $fontColor: #222;
 
 body {
-	background-color: rgba(234, 234, 234, 0.5);
+	background-color: $bgColor;
 	color: $fontColor;
 
 	font: 100%/1.35 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
   font-weight: 200;
 
   -webkit-font-smoothing: antialiased;
@@ -71,42 +74,51 @@ body {
 
 	margin: $bdMargin;
 	max-width: $maxBdWidth;
+
+	@media print {
+		font-size: 12px;
+	}
 }
 
-h1, h2, h3, h4, h5 {
+h1, h3 {
+	font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+	font-weight: bold;
+}
+
+h2, h4, h5 {
   font-weight: 400;
+	line-height: 1.1em;
+	margin-bottom: 0.25em;
 }
 
 h1 {
-  font-size: 2.074em;
+  font-size: 4.236em;
+	line-height: 1em;
 }
 
 h2 {
-	font-size: 1.728em;
+	font-size: 2.618em;
 	margin-bottom: 0.25em;
 }
 
 h3 {
-	font-size: 1.44em;
-	line-height: 1.25em;
-	margin-bottom: 0.25em;
+	font-size: 1.618em;
 }
 
 h4 {
-	font-size: 1.2em;
+	font-size: 1.618em;
 }
 
 h5 {
 	font-size: 1em;
+	font-style: italic;
 }
 
 p, li {
 	font-size: 1em;
 }
 
-section {
-	margin-bottom: 1em;
-}
+
 
 @media print {
 	* {
@@ -119,13 +131,21 @@ section {
 /*** Typography ***/
 
 /*** Grid ***/
+$fullWidth: 100% - 2*$bdMargin;
+$phi: 1.6180339887498948482;
+$phiInverse: 1/$phi;
 
 // Grid based on the Golden Ratio
+section {
+	$sectionGutter: 1em;
+	$sectionMargin: $phiInverse * $phiInverse * $sectionGutter;
+	$sectionPadding: $sectionGutter - $sectionMargin;
+
+	margin-bottom: $sectionMargin;
+	padding-bottom: $sectionGutter;
+}
 
 .grid-phi {
-	$fullWidth: 100% - 2*$bdMargin;
-	$phi: 1.6180339887498948482;
-	$phiInverse: 1/$phi;
 
 	.c-wide {
 		width: percentage($phiInverse) - $bdMargin;
@@ -152,7 +172,7 @@ section {
 		vertical-align: top;
 	}
 
-	@media screen and (max-width: 750px) {
+	@media screen and (max-width: 850px) {
 		.c-wide, .c-short {
 			width: 100% - $bdMargin;
 		}
@@ -162,16 +182,25 @@ section {
 			padding-left: 0;
 		}
 	}
+
+	@media print {
+		.c-wide, .c-short, .c-full {
+			width: $fullWidth;
+		}
+	}
 }
 
 /*** Contact Info ***/
 .contact-info {
+	box-shadow: 0px 3px 0px -2px rgba(136, 136, 136, 0.19);
+	-webkit-box-shadow: 0px 3px 0px -2px rgba(136, 136, 136, 0.19);
+	-moz-box-shadow: 0px 3px 0px -2px rgba(136, 136, 136, 0.19);
+
 	.name {
 		padding-right: 2 * $gutter;
 	}
 
 	.methods {
-
 		li {
 			display: inline-block;
 			margin: 0 $gutter;
@@ -189,17 +218,17 @@ section {
 			display: block;
 		}
 
-		@media screen and (min-width: 1130px) {
+		@media screen and (min-width: 850px) {
 			text-align: right;
 		}
 
-		@media screen and (max-width: 625px) {
+		@media screen and (max-width: 850px) {
 			li {
 				display: block;
 			}
 		}
 
-		@media screen and (max-width: 320px) {
+		@media screen and (max-width: 1030px) {
 			.street {
 				display: block;
 			}
@@ -214,12 +243,14 @@ section {
 
 	.phone {
 		&::before {
+			font-weight: 500;
 			content: "tel:";
 		}
 	}
 
 	.email {
 		&::before {
+			font-weight: 500;
 			content: "mail:";
 		}
 	}
@@ -247,18 +278,41 @@ section {
 
 /*** Experience ***/
 .experience {
+
+	box-shadow: 3px 0px 1px -2px rgba(136,136,136, 0.19);
+	-webkit-box-shadow: 3px 0px 1px -2px rgba(136,136,136, 0.19);
+	-moz-box-shadow: 3px 0px 1px -2px rgba(136,136,136, 0.19);
+
+	@media screen and (max-width: 850px) {
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+	}
+
 	.dates, .location {
 		display: inline-block;
 	}
 
 	.dates {
+		font-weight: 400;
+		margin-bottom: 0.25em;
 		&::after {
 			content: "\2014"
 		}
 	}
 
 	.job {
-		margin-bottom: 0.5em;
+		$jobGutter: 1em;
+		$jobMargin: $phiInverse * $phiInverse * $jobGutter;
+		$jobPadding: $jobGutter - $jobMargin;
+
+		margin-bottom: $jobMargin;
+		padding: 0 $jobGutter $jobPadding 0;
+
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
 	}
 
 	.location {
