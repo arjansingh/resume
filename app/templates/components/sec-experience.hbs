@@ -6,7 +6,7 @@
       <h3 class="title">{{job.title}}</h3>
       <h4 class="employer">{{job.company}}</h4>
       <p class="dates">
-        <span class="start">{{job.start-date}}</span> to <span class="end">{{job.end-date}}</span>
+        <span class="start">{{format-date job.start-date "MMMM GGGG"}}</span> to <span class="end">{{format-date job.end-date "MMMM GGGG"}}</span>
       </p>
       {{#with job.location as location}}
       <p class="location">
