@@ -4,14 +4,19 @@
   <h2>Education</h2>
 
   <ul>
+
     {{#each institution in education }}
       <li class="institution">
+
         <h3>{{ institution.name }}</h3>
-        <p class="degree"><h5>Degree:</h5>{{ institution.degree }}</p>
-        <p class="grad-date"><h5>Graduation Date:</h5>{{ format-date institution.grad-date "MMMM GGGG" }}</p>
+
+        <p class="split">
+          <span class="degree">{{ institution.degree }}</span>
+          <time class="graduated" {{ bind-attr datetime=institution.grad-date }}>{{ format-date institution.grad-date "MMMM GGGG" }}</time>
+        </p>
 
         {{#if institution.honors }}
-          <h5>Honors:</h5>
+          <h5>Honors</h5>
           <ul class="honors">
             {{#each honor in institution.honors }}
               <li class="item">{{ honor }}</li>
@@ -20,7 +25,7 @@
         {{/if}}
 
         {{#if institution.coursework }}
-          <h5>Coursework:</h5>
+          <h5>Coursework</h5>
           <ul class="coursework">
             {{#each course in institution.coursework }}
               <li class="item">{{ course }}</li>
@@ -30,5 +35,7 @@
 
       </li>
     {{/each}}
+
   </ul>
+
 </section>

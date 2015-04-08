@@ -80,6 +80,19 @@ section {
   }
 }
 
+p.split {
+  display: table;
+  width: 100%;
+
+  > * {
+    display: table-cell;
+  }
+
+  > :last-child {
+    text-align: right;
+  }
+}
+
 @media print {
   @page:first {
     margin: 1cm 2cm;

@@ -50,7 +50,7 @@ body {
   }
 }
 
-h1, h3 {
+h1, h3, time {
   font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
   font-weight: bold;
 }
@@ -75,4 +75,12 @@ h5 {
 p, li {
   font-size: 1em;
   margin-bottom: 0.5em;
+}
+
+address {
+  font-weight: 200;
+}
+
+time {
+  color: rgba($fontColor, 0.8);
 }

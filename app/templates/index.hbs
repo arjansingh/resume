@@ -1,23 +1,17 @@
+
 <div class="grid-phi">
+
   <div class="c-full">
-    {{#with contact as contact}}
-      {{sec-contact-info contact=contact}}
-    {{/with}}
+    {{ sec-contact-info contact=contact }}
   </div>
 
   <div class="c-wide">
-    {{#with experience as experience}}
-    {{sec-experience experience=experience}}
-    {{/with}}
+    {{ sec-experience experience=experience }}
   </div>
 
   <div class="c-short">
-    {{#with education as education}}
-    {{sec-education education=education}}
-    {{/with}}
-
-    {{#with skills as skills}}
-    {{sec-skills skills=skills}}
-    {{/with}}
+    {{ sec-education education=education }}
+    {{ sec-skills skills=skills }}
   </div>
+
 </div>

@@ -11,18 +11,6 @@
     -moz-box-shadow: none;
   }
 
-  .dates, .location {
-    display: inline-block;
-  }
-
-  .dates {
-    font-weight: 400;
-    margin-bottom: 0.25em;
-    &::after {
-      content: "\2014"
-    }
-  }
-
   .job {
     $jobGutter: 1em;
     $jobMargin: $phiInverse * $phiInverse * $jobGutter;
@@ -31,17 +19,13 @@
     margin-bottom: $jobMargin;
     padding: 0 $jobGutter $jobPadding 0;
 
+    @media screen and (max-width: 850px) {
+      padding-right: 0;
+    }
+
     &:last-child {
       margin-bottom: 0;
       padding-bottom: 0;
-    }
-  }
-
-  .location {
-    font-style: italic;
-
-    .city::after {
-      content: ',';
     }
   }
 

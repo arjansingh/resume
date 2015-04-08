@@ -12,15 +12,16 @@
 
         <h4 class="employer">{{ job.company }}</h4>
 
-        <p class="dates">
-          <span class="start">{{ format-date job.start-date "MMMM GGGG" }}</span>
-          to
-          <span class="end">{{ format-date job.end-date "MMMM GGGG" }}</span>
-        </p>
+        <p class="split">
 
-        <p class="location">
-          <span class="city">{{ job.location.city }}</span>
-          <span class="state">{{ job.location.state }}</span>
+          <address>{{ job.location.city }}, {{ job.location.state }}</address>
+
+          <span class="dates">
+            <time class="start">{{ format-date job.start-date "MMMM GGGG" }}</time>
+            -
+            <time class="end">{{ format-date job.end-date "MMMM GGGG" }}</time>
+          </span>
+
         </p>
 
         {{#if job.accomplishments }}

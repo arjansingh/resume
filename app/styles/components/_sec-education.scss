@@ -4,18 +4,15 @@
     margin-bottom: 1em;
   }
 
-  p h5 {
-    display: inline-block;
-    margin-bottom: 0;
-    padding-right: 0.25em;
+  time.graduated {
+    width: 5em;
   }
 
   .honors, .coursework {
-    font-style: italic;
     margin-left: 1em;
 
     .item {
-      display: inline-block;
+      display: inline;
 
       &::after {
         content: ',';
