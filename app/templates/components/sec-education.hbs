@@ -5,7 +5,9 @@
     <li class="institution">
       <h3>{{institution.name}}</h3>
       <p class="degree"><h5>Degree:</h5>{{institution.degree}}</p>
+      {{#if institution.gpa}}
       <p class="gpa"><h5>GPA:</h5>{{institution.gpa}}</p>
+      {{/if}}
       <p class="grad-date"><h5>Graduation Date:</h5>{{format-date institution.grad-date "MMMM GGGG"}}</p>
       {{#if institution.honors}}
       <h5>Honors:</h5>

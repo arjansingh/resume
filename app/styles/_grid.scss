@@ -1,0 +1,76 @@
+/*** Grid ***/
+$fullWidth: 100% - 2*$bdMargin;
+$phi: 1.6180339887498948482;
+$phiInverse: 1/$phi;
+
+// Grid based on the Golden Ratio
+section {
+	$sectionGutter: 1em;
+	$sectionMargin: $phiInverse * $phiInverse * $sectionGutter;
+	$sectionPadding: $sectionGutter - $sectionMargin;
+
+	margin-bottom: $sectionMargin;
+	padding-bottom: $sectionGutter;
+}
+
+.grid-phi {
+
+	.c-wide {
+		width: percentage($phiInverse) - $bdMargin;
+
+		& + .c-short {
+			padding-left: 2 * $gutter;
+		}
+	}
+
+	.c-short {
+		width: percentage($phiInverse * $phiInverse) - $bdMargin;
+
+		& + .c-wide {
+			padding-left: 8*$gutter;
+		}
+	}
+
+	.c-full {
+		width: $fullWidth;
+	}
+
+	.c-wide, .c-short {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	@media screen and (max-width: 850px) {
+		.c-wide, .c-short {
+			width: 100% - $bdMargin;
+		}
+
+		.c-wide + .c-short,
+		.c-short + .c-wide {
+			padding-left: 0;
+		}
+	}
+
+	@media print {
+		.c-wide, .c-short, .c-full {
+			display: block;
+			margin-bottom: 0.15em;
+			width: 100%;
+		}
+
+		.c-wide + .c-short,
+		.c-short + .c-wide {
+			padding-left: 0;
+		}
+	}
+}
+
+@media print {
+	@page:first {
+		margin: 1cm 2cm;
+	}
+
+	@page {
+		margin: 2cm 2cm 1cm;
+	}
+}

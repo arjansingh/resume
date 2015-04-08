@@ -6,6 +6,10 @@ import skills from 'arjans-resume/data/skills';
 
 export default Ember.Route.extend({
   model: function () {
+    education.forEach(function (entry) {
+      delete entry.gpa;
+    });
+    
     return {
       'contact': contactInfo,
       'education': education,
