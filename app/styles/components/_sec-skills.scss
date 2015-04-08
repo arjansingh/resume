@@ -1,0 +1,55 @@
+/*** Skills ***/
+.skills {
+	.item {
+		$itemColor: hsl(255, 75%, 75%);
+		$transitionTime: 150ms;
+
+		display: inline-block;
+		background-color: $itemColor;
+
+		border-radius: 4px 4px 4px 4px;
+		-moz-border-radius: 4px 4px 4px 4px;
+		-webkit-border-radius: 4px 4px 4px 4px;
+		border: 0px solid #000000;
+
+		margin: $gutter 0;
+		padding: 2*$gutter 4*$gutter;
+
+		@include transition(background-color, $transitionTime, ease-in-out);
+
+		pre {
+			@include transition(font-weight, $transitionTime, ease-in-out);
+		}
+
+		vertical-align: bottom;
+
+		&:hover {
+			background-color: darken($itemColor, 15);
+			pre {
+				font-weight: 600;
+			}
+		}
+		@media print {
+			display: inline-block;
+			margin: 0 0.25em 0 0;
+			padding: 0;
+		}
+	}
+
+	@media print {
+		.software, .languages, .interests {
+			margin-bottom: 1em;
+		}
+
+		li {
+			&::after {
+				content: ',';
+				margin-left: -0.1em;
+			}
+
+			&:last-child::after {
+				content: none;
+			}
+		}
+	}
+}

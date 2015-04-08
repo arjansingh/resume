@@ -1,0 +1,54 @@
+// Hat Tip: git@github.com:adambom/Sass-Math.git
+@function power ($x, $n) {
+    $ret: 1;
+
+    @if $n >= 0 {
+        @for $i from 1 through $n {
+            $ret: $ret * $x;
+        }
+    } @else {
+        @for $i from $n to 0 {
+            $ret: $ret / $x;
+        }
+    }
+
+    @return $ret;
+}
+
+// because I don't feel like downloading Compass
+@mixin transition ($property, $duration, $fn: ease-in-out) {
+	transition: $property $duration $fn;
+	-webkit-transition: $property $duration $fn;
+	-moz-transition: $property $duration $fn;
+	-ms-transition: $property $duration $fn;
+	-o-transition: $property $duration $fn;
+}
+
+// because I got tired of manually tweaking these.
+@mixin scaledHeadings ($ratio) {
+	$h5: 1em;
+
+	h1 {
+		font-size: power($ratio, 4) * $h5;
+	}
+
+	h2 {
+		font-size: power($ratio, 3) * $h5;
+	}
+
+	h3 {
+		font-size: power($ratio, 2) * $h5;
+	}
+
+	h4 {
+		font-size: $ratio * $h5;
+	}
+
+	h5 {
+		font-size: $h5;
+	}
+
+	h6 {
+		font-size: power($ratio, 0.5) * $h5;
+	}
+}

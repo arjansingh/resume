@@ -1,0 +1,91 @@
+@import "_mixins.scss";
+
+/*** Typography ***/
+
+$bgColor: rgba(234, 234, 234, 0.5);
+$bdMargin: 4%;
+$gutter: 0.5%;
+$maxBdWidth: 1280px;
+$fontColor: #222;
+
+body {
+	background-color: $bgColor;
+	color: $fontColor;
+
+	font: 100%/1.35 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+  font-weight: 200;
+
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	text-rendering: optimizeLegibility;
+
+	margin: $bdMargin;
+	max-width: $maxBdWidth;
+
+	@media print {
+		font-size: 12px;
+	}
+}
+
+@media screen and (min-width: 850px) {
+	@include scaledHeadings(1.333);
+}
+
+@media screen and (max-width: 850px) {
+	@include scaledHeadings(1.200);
+}
+
+@media screen and (max-width: 320px) {
+	@include scaledHeadings(1.125);
+}
+
+@media print {
+	@include scaledHeadings(1.250);
+
+	* {
+		background: transparent !important;
+		color: #000 !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, h3 {
+	font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+	font-weight: bold;
+}
+
+h2, h4, h5 {
+	line-height: 1.1em;
+	margin-bottom: 0.25em;
+}
+
+h2, h5 {
+  font-weight: 400;
+}
+
+h1 {
+	line-height: 1em;
+}
+
+h2 {
+	margin-bottom: 0.25em;
+}
+
+h4 {
+	font-weight: 500;
+}
+
+h5 {
+	font-style: italic;
+}
+
+p, li {
+	font-size: 1em;
+}
