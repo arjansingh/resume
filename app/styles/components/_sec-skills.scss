@@ -1,57 +1,39 @@
 /*** Skills ***/
+$skillColor: hsl(255, 75%, 75%);
+
 .skills {
-	.item {
-		$itemColor: hsl(255, 75%, 75%);
-		$transitionTime: 150ms;
 
-		display: inline-block;
-		background-color: $itemColor;
+  ul {
+    margin-bottom: 1em;
+  }
 
-		border-radius: 4px 4px 4px 4px;
-		-moz-border-radius: 4px 4px 4px 4px;
-		-webkit-border-radius: 4px 4px 4px 4px;
-		border: 0px solid #000000;
+  .item {
+    $transitionTime: 150ms;
 
-		margin: $gutter 0;
-		padding: 2*$gutter 4*$gutter;
+    background-color: rgba($skillColor, 0.2);
+    border-radius: 4px;
+    color: mix(black, $skillColor, 60%);
+    cursor: default;
+    display: inline-block;
+    margin: 0.25em 0;
+    padding: 0.25em 0.5em;
 
-		@include transition(background-color, $transitionTime, ease-in-out);
+    &:hover {
+      background-color: rgba($skillColor, 0.4);
+    }
 
-		pre {
-			@include transition(font-weight, $transitionTime, ease-in-out);
-		}
+    @media print {
+      margin: 0;
+      padding: 0;
 
-		vertical-align: bottom;
+      &::after {
+        content: ',';
+        margin-left: -0.25em;
+      }
 
-		&:hover {
-			background-color: darken($itemColor, 15);
-			pre {
-				font-weight: 600;
-			}
-		}
-		@media print {
-			margin: 0;
-			padding: 0;
-
-			border-radius: 0;
-			-moz-border-radius: 0;
-			-webkit-border-radius: 0;
-			border: none;
-
-			&::after {
-				content: ',';
-				margin-left: -0.25em;
-			}
-
-			&:last-child::after {
-				content: none;
-			}
-		}
-	}
-
-	@media print {
-		.software, .languages, .interests {
-			margin-bottom: 1em;
-		}
-	}
+      &:last-child::after {
+        content: none;
+      }
+    }
+  }
 }

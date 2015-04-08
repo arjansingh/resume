@@ -1,32 +1,33 @@
 /*** Education ***/
 .education {
-	.institution {
-		margin-bottom: 1em;
-	}
+  .institution {
+    margin-bottom: 1em;
+  }
 
-	h5 {
-		display: inline-block;
-		padding-right: 0.25em;
-	}
+  p h5 {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-right: 0.25em;
+  }
 
-	.honors {
-		font-style: italic;
-		margin-left: 1em;
+  .honors, .coursework {
+    font-style: italic;
+    margin-left: 1em;
 
-		.item {
-			display: inline-block;
+    .item {
+      display: inline-block;
 
-			&::after {
-				content: ',';
-			}
+      &::after {
+        content: ',';
+      }
 
-			&:last-child::after {
-				content: none;
-			}
-		}
-	}
+      &:last-child::after {
+        content: none;
+      }
+    }
+  }
 
-	@media print {
-		page-break-before: always;
-	}
+  @media print {
+    page-break-before: always;
+  }
 }

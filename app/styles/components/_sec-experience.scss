@@ -1,52 +1,56 @@
 /*** Experience ***/
 .experience {
 
-	box-shadow: 3px 0px 1px -2px rgba(136,136,136, 0.19);
-	-webkit-box-shadow: 3px 0px 1px -2px rgba(136,136,136, 0.19);
-	-moz-box-shadow: 3px 0px 1px -2px rgba(136,136,136, 0.19);
+  box-shadow: 3px 0px 1px -2px rgba(136,136,136, 0.19);
+  -webkit-box-shadow: 3px 0px 1px -2px rgba(136,136,136, 0.19);
+  -moz-box-shadow: 3px 0px 1px -2px rgba(136,136,136, 0.19);
 
-	@media screen and (max-width: 850px) {
-		box-shadow: none;
-		-webkit-box-shadow: none;
-		-moz-box-shadow: none;
-	}
+  @media screen and (max-width: 850px) {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+  }
 
-	.dates, .location {
-		display: inline-block;
-	}
+  .dates, .location {
+    display: inline-block;
+  }
 
-	.dates {
-		font-weight: 400;
-		margin-bottom: 0.25em;
-		&::after {
-			content: "\2014"
-		}
-	}
+  .dates {
+    font-weight: 400;
+    margin-bottom: 0.25em;
+    &::after {
+      content: "\2014"
+    }
+  }
 
-	.job {
-		$jobGutter: 1em;
-		$jobMargin: $phiInverse * $phiInverse * $jobGutter;
-		$jobPadding: $jobGutter - $jobMargin;
+  .job {
+    $jobGutter: 1em;
+    $jobMargin: $phiInverse * $phiInverse * $jobGutter;
+    $jobPadding: $jobGutter - $jobMargin;
 
-		margin-bottom: $jobMargin;
-		padding: 0 $jobGutter $jobPadding 0;
+    margin-bottom: $jobMargin;
+    padding: 0 $jobGutter $jobPadding 0;
 
-		&:last-child {
-			margin-bottom: 0;
-			padding-bottom: 0;
-		}
-	}
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
 
-	.location {
-		font-style: italic;
-	}
+  .location {
+    font-style: italic;
 
-	.accomplishments, .duties {
-		.item {
-			list-style-type: disc;
-			line-height: 1.2em;
-			margin-left: 1.5em;
-			margin-bottom: 0.25em;
-		}
-	}
+    .city::after {
+      content: ',';
+    }
+  }
+
+  .accomplishments, .duties {
+    .item {
+      list-style-type: disc;
+      line-height: 1.3;
+      margin-left: 1.5em;
+      max-width: 35em;
+    }
+  }
 }
