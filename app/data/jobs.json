@@ -9,17 +9,16 @@
       "state": "CA"
     },
     "accomplishments": [
-      "Led the front-end engineering and development for Yahoo's \"Community\" launch.",
-      "Built and maintained Yahoo Screen's automated testing suites and infrastructure.",
-      "Helped build and launch the continuos delivery pipeline at Yahoo Screen.",
-      "Helped build the first fully node.js based Yahoo property.",
-      "Built numerous front-end features for Yahoo Screen, Yahoo Live, Yahoo Sports, and Yahoo News."
+      "Led the front-end engineering efforts for Yahoo Screen's \"Community\" and premium shows launch.",
+      "Helped design, build, and launch Yahoo Screen's continuos delivery pipeline.",
+      "Built numerous front-end features for the launches/re-designs of Yahoo Screen, Yahoo Live, Yahoo Sports, and Yahoo News.",
+      "Learned that even at technology companies, working effectivley with people matters just as much as working effectively with technology."
     ],
     "duties": [
+      "Building client-side features to enhance the Yahoo Video groups efforts to increase personalization and engagement",
       "Building front-end server-side data modeling libraries to normalize Screen's API calls.",
-      "Building client-side features to enhance Yahoo Screen's efforts to increase personalization and engagement",
-      "Maintaining the reliablity of Yahoo Screen and Yahoo Live's Continiuous Delivery pipeline",
-      "General SCRUM Mastering for Yahoo Screen's engineering team."
+      "Building and maintaing Yahoo Screen and Yahoo Live's automated test suites and infrastructure.",
+      "SCRUM Mastering for Yahoo Video destinations engineering team."
     ]
   },
   {
@@ -32,15 +31,14 @@
       "state": "CA"
     },
     "accomplishments": [
-      "Worked with other co-founder toeveloped and launched Lawyerfy, a SaaS Case Management platform for managing a law firm’s cases and improving lawyer-client communication.",
-      "Successfull gained acceptance to several incubators",
-      "Pitched for and recieved offers for several small seed investments"
+      "Worked a co-founder to develop and launch Lawyerfy, a SaaS Case Management platform for managing a law firm’s cases and improving lawyer-client communication.",
+      "Successfully gained acceptance to several startip incubators.",
+      "Pitched for and recieved offers for multiple initial seed investments.",
+      "Learned (The Hard Way™) how to fail at growing a business."
     ],
     "duties": [
-      "Full-stack engineering using a custom-built PHP MVC framework and jQuery.",
+      "General full-stack engineering using a custom-built PHP MVC framework, jQuery, and MySQL.",
       "Implemented client-side widgets using a modular jQuery-based architecture.",
-      "Created client-side JavaScript data models that synched with server-side data.",
-      "Utilized custom events to create a modular, responsive dashboard.",
       "General administrative work including managing our accounting, drafting sales agreements, and supporting our buisness development efforts."
     ]
   },
@@ -54,10 +52,12 @@
       "state": "CA"
     },
     "accomplishments": [
-      "Reduced financial auditing time by over 20% by streamlining audit procedures and partially automating the company’s final audit process on cases."
+      "Reduced financial auditing times 20% by partially automating the company’s closing audit process for cases."
     ],
     "duties": [
-      "Reviewed and managed 400 concurrent securities arbitrations to ensure that they followed relevant legal standards and produced judicially confirmable awards."
+      "Reviewed and managed 400 concurrent securities arbitrations.",
+      "Ensured that each arbiration abided by relevant legal stanards and procedures.",
+      "Assisted arbitrators in producing judicially confirmable arbitration awards."
     ]
   },
   {
@@ -73,7 +73,7 @@
       "Aided in the successful prosecution of four special circumstance murder trials and one capital-phase trial."
     ],
     "duties": [
-      "Assisted deputy district attorneys the in prosecution of Cal. Penal Code § 190.2 murder cases."
+      "Assisted deputy district attorneys the in prosecution of Cal. Penal Code § 190.2 special circumstance murder cases."
     ]
   },
   {

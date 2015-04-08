@@ -1,6 +1,7 @@
 {
   "software": [
     "AJAX",
+    "Angular Protractor",
     "chai.js",
     "Chrome Developer Tools", "CoffeeScript",
     "CSS3",
@@ -17,12 +18,10 @@
     "mocha.js",
     "MySQL",
     "Node.js",
-    "Protractor",
     "Photoshop",
     "REST",
     "SASS/Compass",
     "Selenium Webdriver",
-    "SQL",
     "Subversion",
     "SVG",
     "q.js"
