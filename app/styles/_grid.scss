@@ -6,7 +6,7 @@ $gutter: 0.5%;
 $maxBdWidth: 1000px;
 $minBdWidth: 320px;
 
-$fullWidth: 100% - 2*$bdMargin;
+$fullWidth: 100% - $bdMargin;
 $phi: 1.6180339887498948482;
 $phiInverse: 1/$phi;
 $phiISquared: power($phiInverse, 2);
