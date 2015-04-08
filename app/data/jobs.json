@@ -9,16 +9,17 @@
       "state": "CA"
     },
     "accomplishments": [
-      "Led the front-end engineering efforts for Yahoo Screen's \"Community\" and premium shows launch.",
-      "Helped design, build, and launch Yahoo Screen's continuos delivery pipeline.",
-      "Built numerous front-end features for the launches/re-designs of Yahoo Screen, Yahoo Live, Yahoo Sports, and Yahoo News.",
-      "Learned that even at technology companies, working effectivley with people matters just as much as working effectively with technology."
+      "Led the front-end engineering team for Yahoo Screen's \"Community\" launch.",
+      "Helped design, build, and launch Yahoo Screen's continuous delivery pipeline.",
+      "Built numerous front-end features for the launches and redesigns of Yahoo Screen, Yahoo Live, Yahoo Sports, and Yahoo News.",
+      "Helped standardize Protractor as the automated browser testing framework for Yahoo's Homepage and Verticals engineering group.",
+      "Learned that even at technology companies, working effectively with people matters just as much as working effectively with technology."
     ],
     "duties": [
-      "Building client-side features to enhance the Yahoo Video groups efforts to increase personalization and engagement.",
-      "Building front-end server-side data modeling libraries to normalize Screen's API calls.",
-      "Building and maintaing Yahoo Screen and Yahoo Live's automated test suites and infrastructure.",
-      "SCRUM Mastering for Yahoo Video destinations engineering team."
+      "Building client-side features to increase user personalization, engagement, and retention for Yahoo's video products.",
+      "Writing front-end server data normalization libraries to interface with Yahoo's numerous video APIs.",
+      "Architecting and maintaining Yahoo Screen and Yahoo Live's automated testing infrastructure.",
+      "SCRUM Mastering and team planning for my current engineering team."
     ]
   },
   {
@@ -31,19 +32,18 @@
       "state": "CA"
     },
     "accomplishments": [
-      "Worked a co-founder to develop and launch Lawyerfy, a SaaS Case Management platform for managing a law firm’s cases and improving lawyer-client communication.",
-      "Successfully gained acceptance to several startip incubators.",
-      "Pitched for and recieved offers for multiple initial seed investments.",
-      "Learned (The Hard Way™) how to fail at growing a business."
+      "Worked with co-founder to develop and launch Lawyerfy, a SaaS Case Management platform for managing a law firm’s cases and improving lawyer-client communication.",
+      "Successfully gained admittance to several startup incubators.",
+      "Pitched for and received multiple offers for initial seed investments.",
+      "Learned (\"The Hard Way™\") how to fail at growing a business."
     ],
     "duties": [
-      "General full-stack engineering using a custom-built PHP MVC framework, jQuery, and MySQL.",
-      "Implemented client-side widgets using a modular jQuery-based architecture.",
-      "General administrative work including managing our accounting, drafting sales agreements, and supporting our buisness development efforts."
+      "Full-stack engineering using a custom-built PHP-based MVC framework, jQuery, and MySQL.",
+      "General administrative work, financial accounting, drafting sales agreements, and supporting business development efforts."
     ]
   },
   {
-    "company": "Financial Industry Regulatory Authority (FINRA)",
+    "company": "FINRA (Financial Industry Regulatory Authority)",
     "title": "Staff Attorney",
     "start-date": "2010-06",
     "end-date": "2011-08",
@@ -56,7 +56,7 @@
     ],
     "duties": [
       "Reviewed and managed 400 concurrent securities arbitrations.",
-      "Ensured that each arbiration abided by relevant legal stanards and procedures.",
+      "Ensured that each arbitration abided by relevant legal standards and procedures.",
       "Assisted arbitrators in producing judicially confirmable arbitration awards."
     ]
   },

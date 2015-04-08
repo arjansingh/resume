@@ -1,7 +1,18 @@
+@import "_mixins.scss";
+
 /*** Grid ***/
+$bdMargin: 4%;
+$gutter: 0.5%;
+$maxBdWidth: 1280px;
+
 $fullWidth: 100% - 2*$bdMargin;
 $phi: 1.6180339887498948482;
 $phiInverse: 1/$phi;
+
+body {
+	margin: $bdMargin;
+	max-width: $maxBdWidth;
+}
 
 // Grid based on the Golden Ratio
 section {
@@ -24,10 +35,11 @@ section {
 	}
 
 	.c-short {
-		width: percentage($phiInverse * $phiInverse) - $bdMargin;
+		$phiISquared: power($phiInverse, 2);
+		width: percentage($phiISquared) - $bdMargin;
 
 		& + .c-wide {
-			padding-left: 8*$gutter;
+			padding-left: 6*$gutter + $bdMargin;
 		}
 	}
 

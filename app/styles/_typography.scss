@@ -3,9 +3,6 @@
 /*** Typography ***/
 
 $bgColor: rgba(234, 234, 234, 0.5);
-$bdMargin: 4%;
-$gutter: 0.5%;
-$maxBdWidth: 1280px;
 $fontColor: #222;
 
 body {
@@ -20,9 +17,6 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 
 	text-rendering: optimizeLegibility;
-
-	margin: $bdMargin;
-	max-width: $maxBdWidth;
 
 	@media print {
 		font-size: 12px;
