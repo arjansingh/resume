@@ -24,6 +24,7 @@
 
     @media print {
       display: inline-block;
+      margin-bottom: 0;
     }
   }
 
@@ -50,6 +51,7 @@
       h4 {
         font-size: 1em;
         font-weight: 500;
+        margin-bottom: 0.25em;
       }
     }
   }
