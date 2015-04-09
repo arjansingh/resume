@@ -2,6 +2,8 @@
 
 This is my resume, curriculum vitae, or (scant) portfolio. I built it on Ember because that's just what I felt like learning for the occasion.
 
+View it at [arjansingh.github.io](http://arjansingh.github.io/).
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
