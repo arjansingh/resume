@@ -24,10 +24,10 @@
           </ul>
         {{/if}}
 
-        {{#if institution.coursework }}
-          <h5>Coursework</h5>
-          <ul class="coursework">
-            {{#each course in institution.coursework }}
+        {{#if institution.honors-grades}}
+          <h5>Honors Grades</h5>
+          <ul class="grades">
+            {{#each course in institution.honors-grades}}
               <li class="item">{{ course }}</li>
             {{/each}}
           </ul>
