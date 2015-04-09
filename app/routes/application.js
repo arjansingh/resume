@@ -5,12 +5,14 @@ import experience from 'arjans-resume/data/jobs';
 import skills from 'arjans-resume/data/skills';
 
 export default Ember.Route.extend({
+
   model: function () {
     return {
       'contact': contactInfo,
       'education': education,
-      'experience': experience.splice(0,3),
+      'experience': experience.splice(0, 3),
       'skills': skills
     };
   }
+
 });

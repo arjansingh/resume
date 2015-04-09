@@ -3,86 +3,102 @@
 /*** Grid ***/
 $bdMargin: 4%;
 $gutter: 0.5%;
-$maxBdWidth: 1280px;
+$maxBdWidth: 1000px;
+$minBdWidth: 320px;
 
-$fullWidth: 100% - 2*$bdMargin;
+$fullWidth: 100% - $bdMargin;
 $phi: 1.6180339887498948482;
 $phiInverse: 1/$phi;
+$phiISquared: power($phiInverse, 2);
+
+$sectionGutter: 1em;
+$sectionMargin: $phiISquared * $sectionGutter;
+$sectionPadding: $sectionGutter - $sectionMargin;
 
 body {
-	margin: $bdMargin;
-	max-width: $maxBdWidth;
+  padding: $bdMargin;
+  margin: auto;
+  max-width: $maxBdWidth;
+  min-width: $minBdWidth;
 }
 
 // Grid based on the Golden Ratio
 section {
-	$sectionGutter: 1em;
-	$sectionMargin: $phiInverse * $phiInverse * $sectionGutter;
-	$sectionPadding: $sectionGutter - $sectionMargin;
-
-	margin-bottom: $sectionMargin;
-	padding-bottom: $sectionGutter;
+  margin-bottom: $sectionMargin;
+  padding: $sectionPadding $sectionGutter;
 }
 
 .grid-phi {
 
-	.c-wide {
-		width: percentage($phiInverse) - $bdMargin;
+  .c-wide {
+    width: percentage($phiInverse) - $bdMargin;
 
-		& + .c-short {
-			padding-left: 2 * $gutter;
-		}
-	}
+    & + .c-short {
+      padding-left: 2 * $gutter;
+    }
+  }
 
-	.c-short {
-		$phiISquared: power($phiInverse, 2);
-		width: percentage($phiISquared) - $bdMargin;
+  .c-short {
+    width: percentage($phiISquared) - $bdMargin;
 
-		& + .c-wide {
-			padding-left: 6*$gutter + $bdMargin;
-		}
-	}
+    & + .c-wide {
+      padding-left: 6*$gutter + $bdMargin;
+    }
+  }
 
-	.c-full {
-		width: $fullWidth;
-	}
+  .c-full {
+    width: $fullWidth;
+  }
 
-	.c-wide, .c-short {
-		display: inline-block;
-		vertical-align: top;
-	}
+  .c-wide, .c-short {
+    display: inline-block;
+    vertical-align: top;
+  }
 
-	@media screen and (max-width: 850px) {
-		.c-wide, .c-short {
-			width: 100% - $bdMargin;
-		}
+  @media screen and (max-width: 850px) {
+    .c-wide, .c-short {
+      width: 100% - $bdMargin;
+    }
 
-		.c-wide + .c-short,
-		.c-short + .c-wide {
-			padding-left: 0;
-		}
-	}
+    .c-wide + .c-short,
+    .c-short + .c-wide {
+      padding-left: 0;
+    }
+  }
 
-	@media print {
-		.c-wide, .c-short, .c-full {
-			display: block;
-			margin-bottom: 0.15em;
-			width: 100%;
-		}
+  @media print {
+    .c-wide, .c-short, .c-full {
+      display: block;
+      margin-bottom: 0.15em;
+      width: 100%;
+    }
 
-		.c-wide + .c-short,
-		.c-short + .c-wide {
-			padding-left: 0;
-		}
-	}
+    .c-wide + .c-short,
+    .c-short + .c-wide {
+      padding-left: 0;
+    }
+  }
+}
+
+p.split {
+  display: table;
+  width: 100%;
+
+  > * {
+    display: table-cell;
+  }
+
+  > :last-child {
+    text-align: right;
+  }
 }
 
 @media print {
-	@page:first {
-		margin: 1cm 2cm;
-	}
+  @page:first {
+    margin: 1cm 2cm;
+  }
 
-	@page {
-		margin: 2cm 2cm 1cm;
-	}
+  @page {
+    margin: 2cm 2cm 1cm;
+  }
 }
