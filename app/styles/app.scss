@@ -6,3 +6,17 @@
 @import "components/_sec-experience.scss";
 @import "components/_sec-skills.scss";
 @import "components/_sec-education.scss";
+
+.github-fork-ribbon-wrapper {
+  $ribbonColor: hsl(255, 75%, 75%);
+  @media print {
+    display: none;
+  }
+
+  .github-fork-ribbon {
+    background-color: rgba($ribbonColor, 0.75);
+    &:hover {
+      background-color: rgba($ribbonColor, 1);
+    }
+  }
+}

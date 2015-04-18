@@ -12,6 +12,7 @@
     "ember-qunit": "0.2.8",
     "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1",
-    "moment": "~2.9.0"
+    "moment": "~2.9.0",
+    "github-fork-ribbon-css": "~0.1.1"
   }
 }
